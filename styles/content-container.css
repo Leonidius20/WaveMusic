@@ -1,0 +1,23 @@
+#side-menu-container {
+    min-width: 200px;
+    flex-basis: 20%;
+}
+
+#content-container {
+    flex-basis: 80%;
+
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    background-color: gray;
+}
+
+.artist-card {
+    max-width: 200px;
+}
+
+.artist-image {
+    width: 200px;
+    height: auto;
+}

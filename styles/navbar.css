@@ -1,0 +1,43 @@
+#hamburger-button {
+    background-color: blueviolet;
+    position: sticky;
+    right: 10px;
+}
+
+#navbar {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* for mobile devices */
+@media screen and (max-width: 560px) {
+    #navbar {
+        display: none;
+        width: fit-content;
+        position: absolute;
+        padding-top: 30pt;
+        flex-direction: column;
+    }
+}
+
+/* for non-mobile devices (tablets and desktops) */
+@media screen and (min-width: 560px) {
+    #hamburger-button {
+        display: none;
+    }
+}
+
+.navbar-item {
+    line-height: 50px;
+    text-decoration: none;
+    color: blueviolet;
+    transition: 0.3s;
+}
+
+.navbar-item:hover {
+    background-color: #484848;
+}
