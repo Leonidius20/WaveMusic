@@ -37,5 +37,16 @@ window.onload = () => {
     }
 }
 
-
+// because js applies style inline in html and it has to be cleared
+window.onresize = () => {
+    if (window.innerWidth > 560) { // not a mobile device anymore
+        navbar.style.display = 'flex';
+        navbar.style.opacity = '1';
+        for (const property of sideMenu.style) {
+            sideMenu.style.removeProperty(property);
+        }
+    } else {
+        navbar.style.display = 'none';
+    }
+}
 
