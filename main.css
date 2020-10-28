@@ -22,10 +22,3 @@ body {
     vertical-align: middle;
     line-height: normal;
 }
-
-#container {
-    margin: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-}
