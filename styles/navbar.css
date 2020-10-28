@@ -1,7 +1,10 @@
 #hamburger-button {
     background-color: blueviolet;
-    position: sticky;
-    right: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
 }
 
 #navbar {
@@ -15,19 +18,22 @@
 
 /* for mobile devices */
 @media screen and (max-width: 560px) {
+    #hamburger-button {
+        display: block;
+    }
+
     #navbar {
         display: none;
-        width: fit-content;
-        position: absolute;
+        width: 100vw; /* changed with js */
+
+
+        /* display: none; */
+        position: fixed; /* Stay in place */
+        top: 0; /* Stay at the top */
+        left: 0;
+        transition: all 2s ease-in-out;
         padding-top: 30pt;
         flex-direction: column;
-    }
-}
-
-/* for non-mobile devices (tablets and desktops) */
-@media screen and (min-width: 560px) {
-    #hamburger-button {
-        display: none;
     }
 }
 
