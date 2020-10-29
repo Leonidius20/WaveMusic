@@ -31,7 +31,7 @@ body {
     height: 80px;
     border-radius: 100px;
     border: 0;
-    background-color: darkviolet;
+    background-color: blueviolet;
     color: white;
     font-size: xx-large;
     padding: 15px;
@@ -40,4 +40,8 @@ body {
 #play-button:focus {
     outline: none;
     border: rebeccapurple 5px solid;
+}
+
+#play-button:hover {
+    background-color: darkviolet;
 }

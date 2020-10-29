@@ -157,3 +157,23 @@ ul {
 .side-menu-item:hover {
     background-color: #484848;
 }
+
+footer {
+    background-color: black;
+}
+
+.footer-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer-card {
+    flex-grow: 0;     /* do not grow   - initial value: 0 */
+    flex-shrink: 0;   /* do not shrink - initial value: 1 */
+    padding: 10px;
+}
+
+.credits {
+    padding: 10px;
+}
