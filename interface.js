@@ -51,8 +51,10 @@ window.onresize = () => {
 }
 
 function closeSideMenu() {
-    sideMenu.style.width = '0';
-    sideMenuHidden = true;
+    if (window.innerWidth <= MOBILE_WIDTH) { // on mobile devices
+        sideMenu.style.width = '0';
+        sideMenuHidden = true;
+    }
 }
 
 function onSideMenuItemSelected() {
