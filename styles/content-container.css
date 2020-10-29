@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #container {
     margin: 25px;
     display: flex;
@@ -9,6 +13,7 @@
     flex-grow: 0;     /* do not grow   - initial value: 0 */
     flex-shrink: 0;   /* do not shrink - initial value: 1 */
     flex-basis: 200px; /* width/height  - initial value: auto */
+    margin-right: 10px;
 }
 
 #side-menu-button {
@@ -24,7 +29,7 @@
         background-color: black;
         height: 100vh;
         width: 0; /* changed with js */
-        display: none;
+        overflow: hidden;
         /* display: none; */
         position: fixed; /* Stay in place */
         z-index: 2; /* Stay on top */
@@ -46,12 +51,16 @@
         /*flex-direction: column;
         flex-basis: 0;*/
     }
+
+    #side-menu-container {
+        flex-basis: 100%; /* so that the search box can be stretched */
+        flex-shrink: inherit;
+    }
 }
 
 #content-container {
     flex-basis: 80%;
-
-    justify-content: space-evenly;
+    justify-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 1rem;
@@ -60,9 +69,79 @@
 
 .artist-card {
     max-width: 200px;
+    box-shadow: 10px 5px 5px black;
+    background-color: #484848;
+    border-radius: 10px;
 }
 
 .artist-image {
     width: 200px;
     height: auto;
+}
+
+#close-side-menu-button {
+    position: relative;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    left: calc(50vw - 35px);
+    background: none;
+    color: white;
+    border: none;
+    font-size: large;
+}
+
+#close-side-menu-button:hover {
+    color: blueviolet;
+}
+
+#search-box {
+    width: 100%;
+    border-radius: 20px;
+    height: 35px;
+    padding: 10px;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+#search-box:focus {
+    outline: none;
+    border: blueviolet 2px solid;
+}
+
+#side-menu-button {
+    width: 100%;
+    border-radius: 20px;
+    height: 35px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: blueviolet;
+    border: 0;
+    transition: 0.5s;
+}
+
+#side-menu-button:focus {
+    outline: none;
+}
+
+#side-menu-button:hover {
+    background-color: darkviolet;
+}
+
+ul {
+    padding: 0;
+}
+
+.side-menu-item {
+    padding-left: 10px;
+    width: 100%;
+    list-style-type: none;
+    line-height: 50px;
+    color: blueviolet;
+    transition: 0.2s;
+}
+
+.side-menu-item:hover {
+    background-color: #484848;
 }

@@ -13,9 +13,9 @@
     <input id="hamburger-button" type="image" src="icons/menu.svg" alt="Menu"/>
 
     <nav id="navbar">
-        <a class="navbar-item" href="#">ARTISTS</a>
-        <a class="navbar-item" href="#">MEDIA</a>
-        <a class="navbar-item" href="#">TUTORIALS</a>
+        <a class="navbar-item" onclick="closeNavBar()" href="#">ARTISTS</a>
+        <a class="navbar-item" onclick="closeNavBar()" href="#">MEDIA</a>
+        <a class="navbar-item" onclick="closeNavBar()" href="#">TUTORIALS</a>
     </nav>
 
     <div class="parallax">
@@ -24,14 +24,14 @@
 
     <div id="container">
         <div id="side-menu-container">
-            <input type="text" placeholder="Search"/>
+            <input id="search-box" type="text" placeholder="Search"/>
             <button id="side-menu-button">Filters</button>
             <div id="side-menu-items">
                 <button id="close-side-menu-button">X</button>
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
+                <ul id="side-menu-items-list">
+                    <li class="side-menu-item" onclick="onSideMenuItemSelected()">Item 1</li>
+                    <li class="side-menu-item" onclick="onSideMenuItemSelected()">Item 2</li>
+                    <li class="side-menu-item" onclick="onSideMenuItemSelected()">Item 3</li>
                 </ul>
             </div>
         </div>
