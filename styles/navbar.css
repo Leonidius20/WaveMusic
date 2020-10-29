@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     display: none;
 }
 
@@ -13,6 +13,8 @@
     top: 0;
     width: 100%;
     display: flex;
+    z-index: 1;
+    padding: 0;
     justify-content: space-evenly;
 }
 
@@ -23,16 +25,15 @@
     }
 
     #navbar {
-        display: none;
-        width: 100vw; /* changed with js */
-
-
         /* display: none; */
+        max-height: 0;
+        overflow: hidden;
+        width: 100vw; /* changed with js */
         position: fixed; /* Stay in place */
         top: 0; /* Stay at the top */
         left: 0;
-        transition: all 2s ease-in-out;
-        padding-top: 30pt;
+        transition: all 0.5s;
+        /* padding-top: 30pt; */
         flex-direction: column;
     }
 }

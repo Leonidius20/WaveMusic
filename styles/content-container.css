@@ -7,6 +7,7 @@
     display: flex;
     flex-wrap: nowrap;
     width: 95%;
+    justify-content: center;
 }
 
 #side-menu-container {
@@ -25,6 +26,17 @@
 }
 
 @media screen and (max-width: 560px) {
+
+    @keyframes navbar-slide {
+        from {
+
+        }
+
+        to {
+
+        }
+    }
+
     #side-menu-items {
         background-color: black;
         height: 100vh;
@@ -35,7 +47,7 @@
         z-index: 2; /* Stay on top */
         top: 0; /* Stay at the top */
         left: 0;
-        transition: 0.5s;
+        transition: height 0.5s;
     }
 
     #side-menu-button {
@@ -64,18 +76,18 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 1rem;
-    background-color: gray;
 }
 
 .artist-card {
     max-width: 200px;
     box-shadow: 10px 5px 5px black;
-    background-color: #484848;
-    border-radius: 10px;
+    background-color: black;
+    border-radius: 2px;
+    padding: 10px;
 }
 
 .artist-image {
-    width: 200px;
+    width: 180px;
     height: auto;
 }
 

@@ -1,4 +1,5 @@
 const MOBILE_WIDTH = 560;
+const MOBILE_NAVBAR_PADDING = '35px';
 
 let navbar;
 let sideMenu;
@@ -11,11 +12,15 @@ window.onload = () => {
 
     document.getElementById('hamburger-button').onclick = () => {
         if (navbarHidden) {
-            navbar.style.display = 'flex';
-            navbar.style.opacity = '1';
+            navbar.style.maxHeight = '101vh';
+            navbar.style.paddingTop = MOBILE_NAVBAR_PADDING;
+            //navbar.style.display = 'flex';
+            //navbar.style.opacity = '1';
         } else {
-            navbar.style.display = 'none';
-            navbar.style.opacity = '0';
+            navbar.style.maxHeight = '0';
+            navbar.style.paddingTop = '0';
+            //navbar.style.display = 'none';
+            //navbar.style.opacity = '0';
         }
         navbarHidden = !navbarHidden;
     }
@@ -40,13 +45,14 @@ window.onload = () => {
 // because js applies style inline in html and it has to be cleared
 window.onresize = () => {
     if (window.innerWidth > MOBILE_WIDTH) { // not a mobile device anymore
-        navbar.style.display = 'flex';
-        navbar.style.opacity = '1';
+        //navbar.style.display = 'flex';
+        //navbar.style.opacity = '1';
+        navbar.style.removeProperty('max-height');
         for (const property of sideMenu.style) {
             sideMenu.style.removeProperty(property);
         }
     } else {
-        navbar.style.display = 'none';
+        //navbar.style.display = 'none';
     }
 }
 
@@ -63,7 +69,8 @@ function onSideMenuItemSelected() {
 
 function closeNavBar() {
     if (window.innerWidth <= MOBILE_WIDTH) { // on mobile devices
-        navbar.style.display = 'none';
+        navbar.style.maxHeight = '0';
+        navbar.style.paddingTop = '0';
         navbarHidden = true;
     }
 }
