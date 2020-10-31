@@ -17,6 +17,18 @@
     justify-content: space-evenly;
 }
 
+.navbar-item {
+    line-height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: blueviolet;
+    transition: 0.3s;
+}
+
+.navbar-item:hover {
+    background-color: #484848;
+}
+
 /* for mobile devices */
 @media screen and (max-width: 560px) {
     #hamburger-button {
@@ -37,15 +49,4 @@
     .navbar-item {
         padding-left: 10px;
     }
-}
-
-.navbar-item {
-    line-height: 50px;
-    text-decoration: none;
-    color: blueviolet;
-    transition: 0.3s;
-}
-
-.navbar-item:hover {
-    background-color: #484848;
 }

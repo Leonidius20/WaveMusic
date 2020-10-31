@@ -23,6 +23,23 @@
 
 #side-menu-button {
     display: none;
+    width: 100%;
+    border-radius: 20px;
+    height: 35px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: blueviolet;
+    border: 0;
+    transition: 0.5s;
+}
+
+#side-menu-button:focus {
+    outline: none;
+}
+
+#side-menu-button:hover {
+    background-color: rebeccapurple;
 }
 
 #close-side-menu-button {
@@ -76,22 +93,7 @@
     grid-gap: 1rem;
 }
 
-.artist-card {
-    max-width: 200px;
-    box-shadow: 10px 5px 5px black;
-    background-color: black;
-    border-radius: 2px;
-    padding: 10px;
-}
 
-.artist-image {
-    width: 180px;
-    height: auto;
-}
-
-.artist-name {
-    font-size: 1.5em;
-}
 
 #close-side-menu-button {
     position: relative;
@@ -121,26 +123,6 @@
 #search-box:focus {
     outline: none;
     border: blueviolet 2px solid;
-}
-
-#side-menu-button {
-    width: 100%;
-    border-radius: 20px;
-    height: 35px;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: white;
-    background-color: blueviolet;
-    border: 0;
-    transition: 0.5s;
-}
-
-#side-menu-button:focus {
-    outline: none;
-}
-
-#side-menu-button:hover {
-    background-color: darkviolet;
 }
 
 ul {
