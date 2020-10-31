@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+#intro-container {
+    margin: 20px;
+}
+
 #container {
     margin: 25px;
     display: flex;
@@ -47,7 +51,7 @@
         z-index: 2; /* Stay on top */
         top: 0; /* Stay at the top */
         left: 0;
-        transition: height 0.5s;
+        transition: width 0.5s;
     }
 
     #side-menu-button {
@@ -89,6 +93,10 @@
 .artist-image {
     width: 180px;
     height: auto;
+}
+
+.artist-name {
+    font-size: 1.5em;
 }
 
 #close-side-menu-button {
@@ -165,13 +173,14 @@ footer {
 .footer-card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* justify-content: center; */
 }
 
 .footer-card {
-    flex-grow: 0;     /* do not grow   - initial value: 0 */
+    flex-grow: 1;     /* do not grow   - initial value: 0 */
     flex-shrink: 0;   /* do not shrink - initial value: 1 */
-    padding: 10px;
+    flex-basis: 200px;
+    padding: 10px 50px 50px 50px;
 }
 
 .credits {
