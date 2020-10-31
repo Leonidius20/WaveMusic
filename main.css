@@ -1,7 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    /* background-color: #151515; */
     background-image: linear-gradient(black, #303030);
     color: white;
 }
@@ -27,13 +26,12 @@ body {
 @keyframes play-button-color-change {
 
     from {
-        background-color: blueviolet;
+        background-position: bottom;
     }
 
     to {
-        background-color: dodgerblue;
+        background-position: top;
     }
-
 }
 
 #play-button {
@@ -44,11 +42,13 @@ body {
     height: 80px;
     border-radius: 100px;
     border: 0;
-    background-color: blueviolet;
+    background-image: linear-gradient(blueviolet, dodgerblue);
+    background-size: 200% 200%;
+
     color: white;
     font-size: xx-large;
     padding: 15px;
-    animation: play-button-color-change 2s infinite alternate;
+    animation: play-button-color-change 1s infinite alternate;
 }
 
 #play-button:focus {

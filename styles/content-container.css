@@ -29,7 +29,7 @@
     display: none;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1279px) {
 
     #side-menu-items {
         background-color: black;
@@ -61,6 +61,10 @@
     #side-menu-container {
         flex-basis: 100%; /* so that the search box can be stretched */
         flex-shrink: inherit;
+    }
+
+    .side-menu-item {
+        padding-left: 10px;
     }
 }
 

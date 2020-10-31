@@ -1,4 +1,5 @@
 const MOBILE_WIDTH = 560;
+const DESKTOP_WIDTH = 1280;
 const MOBILE_NAVBAR_PADDING = '35px';
 
 let navbar;
@@ -50,7 +51,7 @@ window.onresize = () => {
 }
 
 function closeSideMenu() {
-    if (window.innerWidth <= MOBILE_WIDTH) { // on mobile devices
+    if (window.innerWidth < DESKTOP_WIDTH) { // on tablet and mobile devices
         sideMenu.style.width = '0';
         sideMenuHidden = true;
     }
