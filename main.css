@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Open Sans", Helvetica, sans-serif;
     margin: 0;
@@ -41,11 +45,10 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 100px;
-    border: 0;
+
     background-image: linear-gradient(blueviolet, dodgerblue);
     background-size: 200% 200%;
 
-    color: white;
     font-size: xx-large;
     padding: 15px;
     animation: play-button-color-change 1s infinite alternate;

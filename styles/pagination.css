@@ -1,0 +1,21 @@
+#pagination {
+    padding: 20px 15px 15px 15px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination-button {
+    height: 3em;
+    width: 3em;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: transparent;
+    border: blueviolet solid 2px;
+}
+
+.pagination-button-selected {
+    background-color: blueviolet;
+    border: 0;
+}
