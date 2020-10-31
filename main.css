@@ -7,9 +7,10 @@ body {
     margin: 0;
     background-image: linear-gradient(black, #303030);
     color: white;
+    overflow-x: hidden;
 }
 
-.parallax {
+#cover {
     background-image: url("images/background.jpg");
     height: 100vh;
     width: 100%;
@@ -21,6 +22,8 @@ body {
 
 #welcome-text {
     font-size: 5em;
+    margin-right: 10px;
+    margin-left: 10px;
     background-color: black;
     display: inline-block;
     vertical-align: middle;
@@ -52,6 +55,8 @@ body {
     font-size: xx-large;
     padding: 15px;
     animation: play-button-color-change 1s infinite alternate;
+
+    z-index: 1; /* so that it isn't covered by the navbar */
 }
 
 #play-button:focus {
