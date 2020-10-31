@@ -1,7 +1,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #151515;
+    /* background-color: #151515; */
+    background-image: linear-gradient(black, #303030);
     color: white;
 }
 
@@ -23,6 +24,18 @@ body {
     line-height: normal;
 }
 
+@keyframes play-button-color-change {
+
+    from {
+        background-color: blueviolet;
+    }
+
+    to {
+        background-color: dodgerblue;
+    }
+
+}
+
 #play-button {
     position: fixed;
     bottom: 20px;
@@ -35,13 +48,9 @@ body {
     color: white;
     font-size: xx-large;
     padding: 15px;
+    animation: play-button-color-change 2s infinite alternate;
 }
 
 #play-button:focus {
     outline: none;
-    border: rebeccapurple 5px solid;
-}
-
-#play-button:hover {
-    background-color: darkviolet;
 }
