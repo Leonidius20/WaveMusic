@@ -52,7 +52,6 @@ body {
     background-image: linear-gradient(blueviolet, dodgerblue);
     background-size: 200% 200%;
 
-    font-size: xx-large;
     padding: 15px;
     animation: play-button-color-change 1s infinite alternate;
 
